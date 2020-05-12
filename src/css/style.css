@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  padding: 5vh;
+  position: relative;
+  background-color: black;
+}
+
+h1, h2, h3 {
+  margin-bottom: 20px;
+}
+
+.header {
+  position: absolute;
+  height: calc(0.10 * 90vh);
+  width: calc(100vw - 2 * 5vh);
+  background: linear-gradient(to right, rgba(255,0,255,1), rgba(0,255,255,1));
+}
+
+.header-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.header-box-text {
+  position: absolute;
+  top: 50%;
+  left: calc(0.03 * 90vh);
+  transform: translate(0, -50%);
+}
+
+.main {
+  top: calc(5vh + 0.13 * 90vh);
+  position: absolute;
+  height: calc(90vh - 0.13 * 90vh);
+  width: calc(100vw - 2 * 5vh - 0.3 * 90vw - 0.03 *90vh);
+  padding: calc(0.03 * 90vh);
+  background: linear-gradient(to right bottom, rgba(0,255,255,1), rgba(255,0,255,1));
+}
+
+.scales-card, .selector-box-card {
+  position: relative;
+  height: 20%;
+  background-color: rgba(255,255,0,0.3);
+  color: black;
+  margin-bottom: 3vh;
+  /*
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgba(255,255,0,0.5);
+  */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: 20px;
+}
+
+.comments-card, .scale-info-card {
+  position: relative;
+  height: 76%;
+  background-color: rgba(255,255,0,0.3);
+  /*
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgba(255,255,0,0.5);
+  */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: 20px;
+}
+
+.scale-info-card > p {
+  overflow: auto;
+  height: 85%;
+}
+
+.aside {
+  top: calc(5vh + 0.13 * 90vh);
+  left: calc(100vw - 5vh - 0.3 * 90vw);
+  position: absolute;
+  height: calc(90vh - 0.13 * 90vh);
+  width: calc(0.3 * 90vw);
+  padding: calc(0.03 * 90vh);
+  background: linear-gradient(to left bottom, rgba(255,255,0,1), rgba(255,0,255,1));
+}
+
+@media (max-width: 825px){
+  .main{
+    width: calc(100vw - 2 * 5vh);
+  }
+
+  .aside{
+    width: calc(100vw - 2 * 5vh);
+    left: 5vh;
+    top: calc(95vh + 0.03 * 90vh);
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: rgba(255,255,0,0.4);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0,255,255,0.4);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,255,255,0.8);
+}
